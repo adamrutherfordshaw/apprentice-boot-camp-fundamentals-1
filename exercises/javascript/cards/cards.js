@@ -4,7 +4,8 @@ class Deck {
     this.suits = ["clubs", "diamonds", "hearts", "spades"];
   }
 
-  printCards() {
+  returnCards(requiredSuits) {
+    if (requiredSuits.length != 0) this.suits = requiredSuits;
     this.createCards();
     return this.cards;
   }
