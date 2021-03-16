@@ -1,17 +1,17 @@
 let AnimalCard = class AnimalCard {
   constructor(animal) {
-    this.animal = animal;
+    this.value = animal;
   }
 };
 
 AnimalCard.prototype.snap = function (otherCard) {
-  return (otherCard) && this.animal === otherCard.animal;
+  return otherCard && this.value === otherCard.value;
 };
 
 AnimalCard.prototype.toString = function () {
-  return this.animal.toString();
+  return this.value.toString();
 };
 
 module.exports = {
-  AnimalCard: AnimalCard
+  AnimalCard: AnimalCard,
 };

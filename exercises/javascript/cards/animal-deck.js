@@ -1,5 +1,5 @@
-const animals = require('./animal.js').Animal;
-const { AnimalCard } = require('./animal-card.js');
+const animals = require("./animal.js").Animal;
+const { AnimalCard } = require("./animal-card.js");
 
 let AnimalDeck = class AnimalDeck {
   constructor() {
@@ -39,5 +39,5 @@ AnimalDeck.prototype.deal = function () {
 };
 
 module.exports = {
-  AnimalDeck: AnimalDeck
+  AnimalDeck: AnimalDeck,
 };
