@@ -1,5 +1,6 @@
 const { PlayingDeck } = require("./playing-deck.js");
 const { AnimalDeck } = require("./animal-deck.js");
+const { SuperDeck } = require("./super-deck.js");
 const readline = require("readline");
 
 // to execute the runnable code in this file, use the command
@@ -64,6 +65,6 @@ Snap.prototype.play = async function () {
   process.exit(0);
 };
 
-let deck = new PlayingDeck();
+let deck = new SuperDeck(new AnimalDeck(), new PlayingDeck());
 let snap = new Snap(deck);
 snap.play();
