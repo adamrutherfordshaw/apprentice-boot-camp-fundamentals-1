@@ -1,11 +1,9 @@
-class PlayingCard {
-  constructor(value, suit) {
-    this.value = value;
-    this.suit = suit;
-  }
+const { Card } = require("./card.js");
 
-  snap(otherCard) {
-    return otherCard && this.value === otherCard.value;
+class PlayingCard extends Card {
+  constructor(value, suit) {
+    super(value);
+    this.suit = suit;
   }
 
   toString() {

@@ -27,7 +27,7 @@ Snap.prototype.play = async function () {
     });
     rl.prompt();
     currentCard = this.deck.deal();
-    console.log(currentCard.value);
+    console.log(currentCard.toString());
 
     for await (let line of rl) {
       if (line.length > 0 && line.charAt(0).toLowerCase() === "a") {
